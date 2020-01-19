@@ -1,0 +1,9 @@
+  export class Contact {
+    id: number;
+    name: string;
+    birth: Date;
+    email: string;
+    cellphone: string;
+    phone: string;
+    address: string
+  }

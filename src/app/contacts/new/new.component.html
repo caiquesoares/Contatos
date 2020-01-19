@@ -1,0 +1,26 @@
+<h1>
+  Novo Contato
+</h1>
+{{ contact | json }}
+
+<mat-form-field>
+  <input matInput placeholder="Nome" [(ngModel)]="contact.name">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="E-mail" [(ngModel)]="contact.email">
+</mat-form-field>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Data de Nascimento" [(ngModel)]="contact.birth">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Telefone" [(ngModel)]="contact.phone">
+</mat-form-field><mat-form-field>
+  <input matInput placeholder="Celular" [(ngModel)]="contact.cellphone">
+</mat-form-field>
+<mat-form-field>
+  <input matInput placeholder="Endereço" [(ngModel)]="contact.address">
+</mat-form-field>
+
+<button mat-raised-button [mat-dialog-close]="contact" (click)="newContact(contact)">Salvar Contato</button>

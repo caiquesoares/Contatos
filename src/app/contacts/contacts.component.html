@@ -1,0 +1,23 @@
+<div class="box">
+  <h1>LISTA DE CONTATOS</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur debitis dolor doloremque ea molestiae nemo omnis quis rem unde. Blanditiis nam nulla numquam sed. Fuga quos repellat suscipit vero.
+  </p>
+  <button mat-raised-button color="primary" (click)="openModalNew()">
+    + Adicionar
+  </button>
+  <mat-card>
+    <mat-list role="list">
+      <mat-list-item role="listitem" *ngFor="let contact of contacts">
+        <strong>{{ contact.name }}</strong> / <strong>{{ contact.cellphone}}</strong>
+
+        <button color="primary" mat-raised-button style="float: right" (click)="openModalEdit(contact)">
+          <mat-icon >edit</mat-icon>
+        </button>
+      </mat-list-item>
+    </mat-list>
+  </mat-card>
+  <button mat-raised-button color="primary" (click)="consultService()">
+    Salvar Alterações
+  </button>
+</div>

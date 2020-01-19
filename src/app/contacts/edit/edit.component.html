@@ -1,0 +1,23 @@
+<h1>
+  Editar Contato
+</h1>
+
+  <mat-form-field>
+    <input matInput [(ngModel)]="this.data.name" placeholder="Login">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="this.data.email" placeholder="Password">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date" [(ngModel)]="this.data.birth">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="this.data.cellphone" placeholder="Password">
+  </mat-form-field><mat-form-field>
+  <input matInput [(ngModel)]="this.data.phone" placeholder="Password">
+</mat-form-field>
+  <mat-form-field>
+    <input matInput [(ngModel)]="this.data.address" placeholder="Password">
+  </mat-form-field>

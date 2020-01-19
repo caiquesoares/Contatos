@@ -1,0 +1,18 @@
+<div class="box">
+  <h1>LISTA DE CONTATOS</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad consequuntur debitis dolor doloremque ea molestiae nemo omnis quis rem unde. Blanditiis nam nulla numquam sed. Fuga quos repellat suscipit vero.
+  </p>
+
+  <mat-card>
+      <mat-form-field>
+        <input matInput [(ngModel)]="user" placeholder="Login">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput [(ngModel)]="password" placeholder="Password">
+      </mat-form-field>
+      <button mat-raised-button color="primary" (click)="login(user, password)">
+        Login
+      </button>
+  </mat-card>
+</div>
